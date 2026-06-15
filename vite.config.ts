@@ -29,17 +29,28 @@ export default defineConfig(({ command, mode }) => {
   ];
 
   if (command === "build") {
+    const preset =
+      process.env.NITRO_PRESET ??
+      (process.env.VERCEL ? "vercel" : "cloudflare-module");
+    const isVercel = preset === "vercel";
+
     plugins.splice(
       plugins.length - 1,
       0,
       nitro({
-        preset: process.env.NITRO_PRESET ?? "cloudflare-module",
-        output: {
-          dir: "dist",
-          serverDir: "dist/server",
-          publicDir: "dist/client",
-        },
-        cloudflare: { nodeCompat: true, deployConfig: true },
+        preset,
+        // Cloudflare-only paths. Vercel needs the default `.vercel/output`
+        // layout with `functions/__server.func` — custom output breaks routing.
+        ...(isVercel
+          ? {}
+          : {
+              output: {
+                dir: "dist",
+                serverDir: "dist/server",
+                publicDir: "dist/client",
+              },
+              cloudflare: { nodeCompat: true, deployConfig: true },
+            }),
       }),
     );
   }
