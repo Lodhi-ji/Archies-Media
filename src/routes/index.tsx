@@ -823,19 +823,13 @@ function HeroDashboard() {
                 key={m}
                 onClick={() => setActiveMetric(m)}
                 className={`dash-tab ${activeMetric === m ? "active" : ""}`}
-                style={{
-                  border: "1px solid",
-                  borderColor: activeMetric === m ? metrics[m].color : "var(--border)",
-                  color: activeMetric === m ? "white" : "var(--navy)",
-                  background: activeMetric === m ? metrics[m].color : "transparent",
-                  fontSize: 10,
-                  padding: "4px 8px",
-                  borderRadius: 4,
-                  fontWeight: 600,
-                  transition: "all 0.2s ease",
-                }}
+                style={
+                  {
+                    "--tab-color": metrics[m].color,
+                  } as React.CSSProperties
+                }
               >
-                {m === "rev" ? "Revenue" : m === m ? (m === "roas" ? "ROAS" : "Conversions") : ""}
+                {m === "rev" ? "Revenue" : m === "roas" ? "ROAS" : "Conversions"}
               </button>
             ))}
           </div>
