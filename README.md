@@ -8,16 +8,16 @@ Marketing website for **Archies Media** — a performance-driven digital marketi
 
 ## Tech stack
 
-| Layer | Technology |
-|-------|------------|
-| Framework | [TanStack Start](https://tanstack.com/start) (React 19 + SSR) |
-| Routing | [TanStack Router](https://tanstack.com/router) (file-based) |
-| Build tool | [Vite](https://vitejs.dev/) 7 |
-| Styling | [Tailwind CSS](https://tailwindcss.com/) 4 + custom CSS |
-| UI components | [shadcn/ui](https://ui.shadcn.com/) (Radix UI primitives) |
-| Icons | [Lucide React](https://lucide.dev/) |
-| Server / deploy | [Nitro](https://nitro.build/) (Cloudflare Workers preset) |
-| Language | TypeScript |
+| Layer           | Technology                                                    |
+| --------------- | ------------------------------------------------------------- |
+| Framework       | [TanStack Start](https://tanstack.com/start) (React 19 + SSR) |
+| Routing         | [TanStack Router](https://tanstack.com/router) (file-based)   |
+| Build tool      | [Vite](https://vitejs.dev/) 7                                 |
+| Styling         | [Tailwind CSS](https://tailwindcss.com/) 4 + custom CSS       |
+| UI components   | [shadcn/ui](https://ui.shadcn.com/) (Radix UI primitives)     |
+| Icons           | [Lucide React](https://lucide.dev/)                           |
+| Server / deploy | [Nitro](https://nitro.build/) (Cloudflare Workers preset)     |
+| Language        | TypeScript                                                    |
 
 **Fonts:** Plus Jakarta Sans (body & headings), Playfair Display (italic accents)
 
@@ -51,14 +51,14 @@ Open **http://localhost:8080** in your browser.
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start Vite dev server with hot reload (port **8080**) |
-| `npm run build` | Production build → `dist/` (client + server via Nitro) |
-| `npm run build:dev` | Build in development mode |
-| `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run ESLint |
-| `npm run format` | Format code with Prettier |
+| Command             | Description                                            |
+| ------------------- | ------------------------------------------------------ |
+| `npm run dev`       | Start Vite dev server with hot reload (port **8080**)  |
+| `npm run build`     | Production build → `dist/` (client + server via Nitro) |
+| `npm run build:dev` | Build in development mode                              |
+| `npm run preview`   | Preview the production build locally                   |
+| `npm run lint`      | Run ESLint                                             |
+| `npm run format`    | Format code with Prettier                              |
 
 ---
 
@@ -150,15 +150,15 @@ NITRO_PRESET=node-server npm run build
 
 ## Customization
 
-| What to change | Where |
-|----------------|-------|
-| Page content & sections | `src/routes/index.tsx` |
-| Global / section styles | `src/styles.css` |
-| Logo | `src/assets/archies-logo.png` |
-| Team members | `team` array in `index.tsx` |
-| Pricing plans | `Pricing` component in `index.tsx` |
-| Meta / SEO defaults | `src/routes/__root.tsx` |
-| Contact email / WhatsApp | Contact section in `index.tsx` |
+| What to change           | Where                              |
+| ------------------------ | ---------------------------------- |
+| Page content & sections  | `src/routes/index.tsx`             |
+| Global / section styles  | `src/styles.css`                   |
+| Logo                     | `src/assets/archies-logo.png`      |
+| Team members             | `team` array in `index.tsx`        |
+| Pricing plans            | `Pricing` component in `index.tsx` |
+| Meta / SEO defaults      | `src/routes/__root.tsx`            |
+| Contact email / WhatsApp | Contact section in `index.tsx`     |
 
 ---
 

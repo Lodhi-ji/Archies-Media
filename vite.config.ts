@@ -30,8 +30,7 @@ export default defineConfig(({ command, mode }) => {
 
   if (command === "build") {
     const preset =
-      process.env.NITRO_PRESET ??
-      (process.env.VERCEL ? "vercel" : "cloudflare-module");
+      process.env.NITRO_PRESET ?? (process.env.VERCEL ? "vercel" : "cloudflare-module");
     const isVercel = preset === "vercel";
 
     plugins.splice(
