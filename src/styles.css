@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Lora:ital,wght@1,500;1,600&display=swap");
 @import "tailwindcss" source(none);
 @source "../src";
 
@@ -19,7 +19,7 @@
   --radius-card: 12px;
   --radius-btn: 8px;
   --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
-  --font-accent: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-accent: "Lora", Georgia, "Times New Roman", serif;
 }
 
 * {
@@ -916,7 +916,7 @@ section {
 }
 .about-team-label {
   position: absolute;
-  top: 50%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;

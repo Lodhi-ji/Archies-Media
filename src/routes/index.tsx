@@ -971,68 +971,69 @@ function FAQSection() {
           {faqs.map((faq, idx) => {
             const isOpen = openIdx === idx;
             return (
-              <div
-                key={idx}
-                className={`faq-item reveal ${isOpen ? "open" : ""}`}
-                style={{
-                  marginBottom: 16,
-                  border: "1px solid var(--border)",
-                  borderRadius: 8,
-                  overflow: "hidden",
-                  transition: "all 0.3s ease",
-                  background: isOpen ? "var(--bg-soft)" : "transparent",
-                }}
-              >
-                <button
-                  className="faq-question"
-                  onClick={() => toggle(idx)}
-                  aria-expanded={isOpen}
-                  style={{
-                    width: "100%",
-                    textAlign: "left",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    padding: "18px 24px",
-                    background: "none",
-                    border: "none",
-                    cursor: "pointer",
-                    outline: "none",
-                  }}
-                >
-                  <span style={{ fontSize: 16, fontWeight: 700, color: "var(--navy)" }}>
-                    {faq.q}
-                  </span>
-                  <span
-                    className="faq-icon"
-                    style={{
-                      fontSize: 10,
-                      color: "var(--body)",
-                      transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
-                      transition: "transform 0.2s ease",
-                    }}
-                  >
-                    ▼
-                  </span>
-                </button>
+              <div key={idx} className="reveal" data-delay={idx * 0.05}>
                 <div
-                  className="faq-answer-wrapper"
+                  className={`faq-item ${isOpen ? "open" : ""}`}
                   style={{
-                    maxHeight: isOpen ? 200 : 0,
+                    marginBottom: 16,
+                    border: "1px solid var(--border)",
+                    borderRadius: 8,
                     overflow: "hidden",
-                    transition: "max-height 0.3s ease",
+                    transition: "all 0.3s ease",
+                    background: isOpen ? "var(--bg-soft)" : "transparent",
                   }}
                 >
-                  <div
-                    className="faq-answer"
+                  <button
+                    className="faq-question"
+                    onClick={() => toggle(idx)}
+                    aria-expanded={isOpen}
                     style={{
-                      padding: "0 24px 20px 24px",
-                      fontSize: 14,
-                      color: "var(--body)",
-                      lineHeight: 1.6,
+                      width: "100%",
+                      textAlign: "left",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      padding: "18px 24px",
+                      background: "none",
+                      border: "none",
+                      cursor: "pointer",
+                      outline: "none",
                     }}
                   >
-                    {faq.a}
+                    <span style={{ fontSize: 16, fontWeight: 700, color: "var(--navy)" }}>
+                      {faq.q}
+                    </span>
+                    <span
+                      className="faq-icon"
+                      style={{
+                        fontSize: 10,
+                        color: "var(--body)",
+                        transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                        transition: "transform 0.2s ease",
+                      }}
+                    >
+                      ▼
+                    </span>
+                  </button>
+                  <div
+                    className="faq-answer-wrapper"
+                    style={{
+                      maxHeight: isOpen ? 200 : 0,
+                      overflow: "hidden",
+                      transition: "max-height 0.3s ease",
+                    }}
+                  >
+                    <div
+                      className="faq-answer"
+                      style={{
+                        padding: "0 24px 20px 24px",
+                        fontSize: 14,
+                        color: "var(--body)",
+                        lineHeight: 1.6,
+                      }}
+                    >
+                      {faq.a}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1383,17 +1384,6 @@ function Home() {
                 {/* <span className="nav-brand-text">Archies Media</span> */}
               </div>
               <p className="foot-tag">Growing Brands, Digitally.</p>
-              <div className="socials">
-                <a href="#" aria-label="Instagram" className="soc-ig">
-                  <Instagram size={20} />
-                </a>
-                <a href="#" aria-label="LinkedIn" className="soc-li">
-                  <Linkedin size={20} />
-                </a>
-                <a href="#" aria-label="X" className="soc-x">
-                  <XIcon />
-                </a>
-              </div>
             </div>
             <div className="foot-col">
               <h4>Quick Links</h4>
